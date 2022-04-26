@@ -6,3 +6,9 @@
 **記錄表單**
 
 https://docs.google.com/spreadsheets/d/1Zs2dbf8U-6VOuP8m1HJn-WUoaFpULWvkaWzHtpabsXg/edit#gid=0
+
+**題庫**
+
+[List of Top 75 LeetCode Questions](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
+
+[Top Interview Questions](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
