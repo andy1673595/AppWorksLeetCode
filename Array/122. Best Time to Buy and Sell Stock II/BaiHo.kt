@@ -3,7 +3,7 @@
 Time O(n)
 Space O(1)
  */
-class Solution {
+class Solution122 {
     fun maxProfit(prices: IntArray): Int {
         var ans = 0
         for (i in 1 until prices.size) {
