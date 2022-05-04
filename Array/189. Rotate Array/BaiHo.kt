@@ -2,7 +2,7 @@
  Time O(n)
  Space O(1)
  */
-class Solution189 {
+class Solution {
     fun rotate(nums: IntArray, k: Int): Unit {
         fun swap(s: Int, e: Int) {
             val mid = (s+e)/2

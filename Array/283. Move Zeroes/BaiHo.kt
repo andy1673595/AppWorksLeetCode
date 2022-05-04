@@ -2,7 +2,7 @@
  * Time O(n)
  * Space O(1)
  */
-class Solution283 {
+class Solution {
     fun moveZeroes(nums: IntArray): Unit {
         var nonZeroIndex = 0
         nums.forEachIndexed { i, n ->
