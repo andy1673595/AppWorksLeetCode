@@ -11,7 +11,7 @@
 - What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
   */
 
-class Solution350 {
+class Solution {
     fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
         val count = IntArray(1001)
         

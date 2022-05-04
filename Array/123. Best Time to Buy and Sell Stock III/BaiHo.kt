@@ -2,7 +2,7 @@
 Time O(n)
 Space O(1)
  */
-class Solution123 {
+class Solution {
     fun maxProfit(prices: IntArray): Int {
         var buy1 = Int.MIN_VALUE
         var buy2 = Int.MIN_VALUE
