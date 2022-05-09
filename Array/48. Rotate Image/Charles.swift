@@ -1,6 +1,11 @@
 /**
+https://leetcode.com/problems/rotate-image/
+
 Time O(n^2)
 Space O(1)
+
+1. 沿著左上-右下對角線鏡像
+2. 水平鏡像
 */
 class Solution {
     func rotate(_ matrix: inout [[Int]]) {

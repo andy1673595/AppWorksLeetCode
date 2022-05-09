@@ -1,6 +1,14 @@
 /**
+https://leetcode.com/problems/rotate-array/
+
 Time O(n)
 Space O(1)
+
+[1, 2, 3, 4, 5, 6, 7]
+->
+[7, 6, 5, 4, 3, 2, 1]
+-> (k = 3)
+[5, 6, 7, 1, 2, 3, 4]
 */
 class Solution {
     func rotate(_ nums: inout [Int], _ k: Int) {
