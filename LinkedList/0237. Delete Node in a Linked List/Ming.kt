@@ -1,76 +1,18 @@
-/**
- Recursive solution
- 
- Memory space : O(n)
- Time : O(n)
+/*
+1. node 不是最後一個(tail)，所以不用對 node.next 做 null check
+2. delete node -> 直接將 node 設為 null，還是讓他沒有被 reference 而被 garbage collection
 
- Example : 1 -> 2 -> 3
- 
- reverseList(1) {
-     next = 2
-     newHead = reverseList(2)
-     2->next = 1
-     return newHead
- }
-
- reverseList(2) {
-     next = 3
-     newHead = reverseList(3) 
-     3->next = 2
-     return newHead
- }
-
- reverseList(3) {
-     next = null
-     return 3
- }
- */
-class Solution {
-    fun reverseList(head: ListNode?): ListNode? {
-        val next = head?.next
-        if (next != null) { 
-            // This step is very important (wrong 1 time)
-            head.next = null
-            val newHead = reverseList(next)
-            next?.next = head
-            return newHead
-        } else {
-            return head
-        }
-    }
-}
-
-/**
- Iterative solution
- Space : O(1)
- Time : O(n)
-
- Example : 1 -> 2 -> 3 
- 
- Turn 1 :          1  ->   2  -> 3
-         recent   cur    next
-
- Turn 2 :          1  ->    2  ->  3
-                  recent    cur    next
-
- Turn 3 :          1  ->    2  ->  3
-                          recent   cur    next
- 
+Input: head = [4,5,1,9], node = 5 -> [4,1,9]
+[1] 改 val:  ListNode(4) -> ListNode(1) -> ListNode(1) -> ListNode(9)
+[2] 改 next: ListNode(4) -> ListNode(1) ->                ListNode(9)
  */
 
 class Solution {
-    fun reverseList(head: ListNode?): ListNode? {
-        var recent: ListNode? = null
-        var cur = head
-        
-        while(cur != null) {
-            val next = cur.next
-            cur.next = recent
-            // Set up variables for next turn
-            recent = cur
-            cur = next
-        }
-        
-        return recent
+    fun deleteNode(node: ListNode?) {
+        // if (node!!.next == null) return
+        var tmp = node!!.next
+        node.`val` = tmp!!.`val`
+        node.next = tmp!!.next
+        tmp = null // isolate this mode from list
     }
 }

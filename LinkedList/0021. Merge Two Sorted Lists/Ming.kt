@@ -1,22 +1,16 @@
-fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {        
-    var pre = ListNode(-1)
-    pre.next = head
 
-    var slow: ListNode? = pre
-    var fast: ListNode? = pre
 
-    var times = n
-    while (times > 0) {
-        fast = fast?.next
-        times --
+class Solution {
+    fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {        
+        if (list1 == null) return list2
+        if (list2 == null) return list1
+
+        if (list1.`val` < list2.`val`) {
+            list1.next = mergeTwoLists(list1.next, list2)
+            return list1
+        }
+
+        list2.next = mergeTwoLists(list2.next, list1)
+        return list2
     }
-
-    while (fast?.next != null) {
-        fast = fast?.next
-        slow = slow?.next
-    }
-
-    slow?.next = slow?.next?.next
-
-    return pre.next
 }
