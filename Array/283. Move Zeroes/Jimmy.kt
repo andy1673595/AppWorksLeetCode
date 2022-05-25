@@ -9,6 +9,14 @@ class Solution {
     * 
     * 如此一來我們就可以用 1 次 loop 將所有的非零值都一到前面並保留順序，且也將剩餘的空間都更改為 0 。
     *
+    * [1,0,1,3,2]
+    *   nextTargetIndex = -1
+    *   for
+    *   i = 0 -> nextTargetIndex = -1
+    *   i = 1 -> nextTargetIndex = i = 1
+    *   i = 2 -> [2] -> [1] ==> [1,1,0,3,2]
+    *
+    *
     * Time: O(n)
     * Space: O(1)
     * */
@@ -22,9 +30,6 @@ class Solution {
                 nums[i] = 0
                 nextTargetIndex++
             }
-
         }
-
-        println("nums=${nums.asList()}")
     }
 }
