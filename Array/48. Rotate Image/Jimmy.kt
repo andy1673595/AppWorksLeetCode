@@ -25,7 +25,7 @@ class Solution {
     * (n-j-1, n-i-1) -> (n-(n-i-1)-1, n-j-1) -> (i, n-j-1)
     * (i, n-j-1) -> (j, i)
     * */
-    fun myRotate(matrix: Array<IntArray>): Unit {
+    fun rotate(matrix: Array<IntArray>): Unit {
         val n = matrix.size
         for (i in 0 until n/2) {
             for (j in i until n-i-1) {
