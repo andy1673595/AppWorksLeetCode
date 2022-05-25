@@ -23,6 +23,10 @@ struct ListNode {
 
 class Solution {
 public:
+    // Runtime: 314 ms, faster than 43.05%
+    // Memory Usage: 123.1 MB, less than 31.90%
+    // TIME : O(n)
+    // SPACE : O(1)
     bool isPalindrome(ListNode* head) {
         ListNode* fast = head;
         ListNode* slow = fast;
