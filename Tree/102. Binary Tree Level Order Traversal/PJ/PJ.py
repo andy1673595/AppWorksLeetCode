@@ -15,11 +15,11 @@ class LevelOrderSolution:
             return []
         queue = deque([root])
         while len(queue) > 0:
-            layer, node = queue.popleft()
+            node = queue.popleft()
             if node.left:
-                queue.append([layer+1, node.left])
+                queue.append(node.left)
             if node.right:
-                queue.append([layer+1, node.right])
+                queue.append(node.right)
             print(node.val)
 
 
