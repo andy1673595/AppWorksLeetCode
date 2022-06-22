@@ -126,7 +126,7 @@ int main(int argc, char const *argv[])
     ListNode *singleNode = new ListNode(1);
 
     Solution *sol = new Solution();
-    ListNode *result = sol->removeNthFromEndFastSlow2(sing, 1);
+    ListNode *result = sol->removeNthFromEndFastSlow2(singleNode, 1);
 
 
     std::cout << result->val;

@@ -28,7 +28,7 @@ public:
         ListNode* slowNode = head;
         while (fastNode!=nullptr && fastNode->next!=nullptr) {
             fastNode = fastNode->next->next;
-            if (fastNode == nullptr) return false;
+            // if (fastNode == nullptr) return false;
             slowNode = slowNode->next;
             if (slowNode == fastNode) return true;
         }

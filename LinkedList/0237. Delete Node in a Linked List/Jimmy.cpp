@@ -1,10 +1,8 @@
 
 /*
-You are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.
+Write a function to delete a node in a singly-linked list. You will not be given access to the head of the list, instead you will be given access to the node to be deleted directly.
 
-The middle node of a linked list of size n is the ⌊n / 2⌋th node from the start using 0-based indexing, where ⌊x⌋ denotes the largest integer less than or equal to x.
-
-For n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.
+It is guaranteed that the node to be deleted is not a tail node in the list.
 
 */
 
@@ -31,27 +29,8 @@ struct ListNode {
  */
 class Solution {
 public:
-    // Runtime: 1192 ms, faster than 64.34%
-    // Memory Usage: 294.7 MB, less than 68.47% 
-    ListNode* deleteMiddle(ListNode* head) {
-        ListNode *fastNode = head;
-        ListNode *slowNode = head;
-
-        // if (head->next == nullptr) {return head->next;}
-        // Runtime: 1205 ms, faster than 62.92%
-        // Memory Usage: 294.8 MB, less than 25.32%
-        if (head->next == nullptr) {return nullptr;}
-
-        for(;;) {
-            fastNode = fastNode->next->next;
-            if (fastNode == nullptr || fastNode->next == nullptr) {
-                break;
-            }
-            slowNode = slowNode->next;
-        }
-
-        slowNode->next = slowNode->next->next;
-
-        return head;
+    void deleteNode(ListNode* node) {
+        node->val = node->next->val;
+        node->next = node->next->next;
     }
 };
